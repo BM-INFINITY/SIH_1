@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment Result</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .result-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .result-card {
+            border-radius: 10px;
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .result-card h5 {
+            color: #28a745;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="result-container">
+            <h2>Career Assessment Results</h2>
+
+            <!-- Result card for Name -->
+            <div class="result-card">
+                <h5>Name:</h5>
+                <p id="result-name"></p>
+            </div>
+
+            <!-- Result card for Email -->
+            <div class="result-card">
+                <h5>Email:</h5>
+                <p id="result-email"></p>
+            </div>
+
+            <!-- Result card for Pursuing/Completed -->
+            <div class="result-card">
+                <h5>Pursuing/Completed:</h5>
+                <p id="result-pursuing"></p>
+            </div>
+
+            <!-- Result card for Career Interests -->
+            <div class="result-card">
+                <h5>Career Interests:</h5>
+                <p id="result-interests"></p>
+            </div>
+
+            <!-- Result card for Skills -->
+            <div class="result-card">
+                <h5>Skills:</h5>
+                <p id="result-skills"></p>
+            </div>
+
+            <a href="assesment.html" class="btn btn-custom">Take Another Assessment</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Function to retrieve and display the form data from localStorage
+        window.onload = function() {
+            document.getElementById('result-name').innerText = localStorage.getItem('name') || 'Not Provided';
+            document.getElementById('result-email').innerText = localStorage.getItem('email') || 'Not Provided';
+            document.getElementById('result-pursuing').innerText = localStorage.getItem('pursuing') || 'Not Provided';
+            document.getElementById('result-interests').innerText = localStorage.getItem('interests') || 'Not Provided';
+            document.getElementById('result-skills').innerText = localStorage.getItem('skills') || 'Not Provided';
+        }
+    </script>
+
+</body>
+</html>
